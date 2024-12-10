@@ -28,7 +28,9 @@ import subprocess
 import win32api
 			
 def main():
-#ﾒｲﾝになるｳｲﾝﾄﾞｳの作成
+	
+
+	#ﾒｲﾝになるｳｲﾝﾄﾞｳの作成
 	
 	root = tk.Tk()#-----------------------------------------------------------------------
 	#ﾀｲﾄﾙﾊﾞｰを非表示にする
@@ -90,6 +92,7 @@ class CommonData:
 
 		self.sub_win = None
 
+		if not os.path.isdir("data"):os.mkdir("data")
 		os.chdir('data')
 		self.path = os.getcwd().replace("\\", "/")
 
